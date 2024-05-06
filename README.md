@@ -28,7 +28,7 @@ This Java Spring project aims to develop a comprehensive system for managing and
 
 ## Mockups
 
-Mockups for the user interface can be found in the [mockups]((https://drawsql.app/teams/pnu-7/diagrams/kursova)) directory.
+Mockups for the user interface can be found in the ![ER-diagram](https://drawsql.app/teams/pnu-7/diagrams/kursova) directory.
 
 ## System Behavior
 
