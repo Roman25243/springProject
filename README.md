@@ -1,53 +1,136 @@
-# springProject
-# Accounting of University Premises
+# Облік приміщень університету (University Premises Accounting)
 
-This Java Spring project aims to develop a comprehensive system for managing and accounting for university premises, including classrooms, labs, offices, etc. The system provides functionalities for premises management, booking, reporting, notifications, maintenance tracking, search, access control, and calendar integration.
-
-## Table of Contents
-1. [Functional Requirements](#functional-requirements)
-2. [Mockups](#mockups)
-3. [System Behavior](#system-behavior)
-4. [REST API Endpoints](#rest-api-endpoints)
-5. [Installation and Setup](#installation-and-setup)
-6. [Usage](#usage)
-7. [Contributing](#contributing)
-8. [License](#license)
+This project is a Java Spring application for managing university premises, including classrooms, labs, offices, and more. It features user authentication, premises management, booking systems, reporting, and maintenance tracking.
 
 ## Functional Requirements
 
-1. **User Authentication:** Users can register and log in with roles such as Admin, Faculty, and Staff.
-2. **Dashboard:** Admins have access to a dashboard showing statistics and summaries of all premises.
-3. **Premises Management:** Admins can add, edit, and delete premises with details like room number, capacity, etc.
-4. **Booking System:** Faculty and Staff can book available premises for lectures, meetings, etc., with conflict resolution.
-5. **Reporting:** Generate reports on premises usage, bookings, availability, etc., with filtering options.
-6. **Notifications:** Automated notifications for booking confirmations, reminders, etc., based on user preferences.
-7. **Maintenance Tracking:** Track maintenance activities for premises, including repairs and inspections.
-8. **Search and Filter:** Users can search for premises by various criteria and apply filters.
-9. **Access Control:** Role-based access control for different system functionalities.
-10. **Calendar Integration:** Sync booking schedules with users' calendars for automatic updates and reminders.
+1. **User Authentication**
+   - Users can register and log in to the system.
+   - Users have roles such as Admin, Faculty, and Staff.
+
+2. **Dashboard**
+   - Admins have access to a dashboard showing statistics and summaries of all premises.
+   - Faculty and Staff have limited dashboard access.
+
+3. **Premises Management**
+   - Admins can add, edit, and delete premises.
+   - Premises include classrooms, labs, offices, etc., with details like room number, capacity, equipment, etc.
+   - Premises can be categorized by building, floor, and department.
+
+4. **Booking System**
+   - Faculty and Staff can book available premises for lectures, meetings, or other activities.
+   - Booking includes date, time, purpose, and participants.
+   - Conflict resolution for double bookings or overlapping schedules.
+
+5. **Reporting**
+   - Generate reports on premises usage, bookings, availability, and maintenance schedules.
+   - Reports can be filtered by date, building, department, etc.
+
+6. **Notifications**
+   - Automated notifications for booking confirmations, reminders, and schedule changes.
+   - Email or in-app notifications based on user preferences.
+
+7. **Maintenance Tracking**
+   - Track maintenance activities for each premise, including repairs, inspections, and upgrades.
+   - Maintenance history and upcoming tasks are visible to admins.
+
+8. **Search and Filter**
+   - Users can search for premises by various criteria such as room number, building, capacity, etc.
+   - Filter options for available premises, equipment availability, accessibility features, etc.
+
+9. **Access Control**
+   - Role-based access control for different system functionalities.
+   - Admins can manage user roles and permissions.
+
+10. **Integration with Calendar**
+    - Sync booking schedules with users' calendars (e.g., Google Calendar, Outlook).
+    - Automatic updates and reminders for booked events.
 
 ## Mockups
 
-Mockups for the user interface can be found in the ![ER-diagram](https://drawsql.app/teams/pnu-7/diagrams/kursova) directory.
+1. Login Page
+   ![Login Page](mockups/login-page.png)
 
-## System Behavior
+2. Dashboard (Admin)
+   ![Admin Dashboard](mockups/admin-dashboard.png)
 
-The system handles user authentication, authorization, data storage, business logic, and integration with external calendars. Users interact with the system through a web interface.
+3. Premises Management
+   ![Premises Management](mockups/premises-management.png)
 
-## REST API Endpoints
+4. Booking System
+   ![Booking System](mockups/booking-system.png)
 
-The following REST API endpoints are available:
-- `/api/auth/login` - User login endpoint.
-- `/api/auth/register` - User registration endpoint.
-- `/api/premises` - CRUD operations for premises.
-- `/api/bookings` - Booking management endpoints.
-- `/api/reports` - Endpoint to generate reports.
-- `/api/notifications` - Endpoint to send notifications.
-- `/api/maintenance` - Maintenance tracking endpoints.
-- `/api/search` - Endpoint for searching and filtering premises.
-- `/api/users` - User management endpoints.
-- `/api/calendar` - Endpoint for calendar integration.
+5. Reports
+   ![Reports](mockups/reports.png)
 
-## Installation and Setup
+6. Notifications
+   ![Notifications](mockups/notifications.png)
 
+7. Maintenance Tracking
+   ![Maintenance Tracking](mockups/maintenance-tracking.png)
+
+8. Search and Filter
+   ![Search and Filter](mockups/search-filter.png)
+
+9. Access Control
+   ![Access Control](mockups/access-control.png)
+
+10. Calendar Integration
+    ![Calendar Integration](mockups/calendar-integration.png)
+
+## System Behavior and REST API Endpoints
+
+### System Behavior
+
+- Users interact with the system through a web interface.
+- The system handles authentication, authorization, data storage, and business logic.
+- Actions such as adding premises, booking, generating reports, etc., are processed by the system.
+
+### REST API Endpoints
+
+- **Authentication**
+  - `POST /api/auth/login`: User login endpoint.
+  - `POST /api/auth/register`: User registration endpoint.
+
+- **Premises Management**
+  - `GET /api/premises`: Retrieve a list of all premises.
+  - `POST /api/premises`: Add a new premise.
+  - `PUT /api/premises/{id}`: Update an existing premise.
+  - `DELETE /api/premises/{id}`: Delete a premise.
+
+- **Booking Management**
+  - `GET /api/bookings`: Retrieve a list of all bookings.
+  - `POST /api/bookings`: Create a new booking.
+  - `PUT /api/bookings/{id}`: Update an existing booking.
+  - `DELETE /api/bookings/{id}`: Delete a booking.
+
+- **Reporting**
+  - `GET /api/reports`: Generate reports.
+
+- **Notifications**
+  - `POST /api/notifications`: Send notifications.
+
+- **Maintenance Tracking**
+  - `GET /api/maintenance`: Retrieve maintenance records.
+  - `POST /api/maintenance`: Add a new maintenance record.
+  - `PUT /api/maintenance/{id}`: Update an existing maintenance record.
+  - `DELETE /api/maintenance/{id}`: Delete a maintenance record.
+
+- **Search and Filter**
+  - `GET /api/search`: Search for premises.
+
+- **User Management**
+  - `GET /api/users`: Retrieve a list of all users.
+  - `POST /api/users`: Add a new user.
+  - `PUT /api/users/{id}`: Update an existing user.
+  - `DELETE /api/users/{id}`: Delete a user.
+
+- **Calendar Integration**
+  - `POST /api/calendar`: Sync booking schedules with external calendars.
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/university-premises-accounting.git
 
