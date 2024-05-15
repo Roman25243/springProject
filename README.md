@@ -47,36 +47,7 @@ This project is a Java Spring application for managing university premises, incl
     - Automatic updates and reminders for booked events.
 
 ## Mockups
-
-1. Login Page
-   ![Login Page](mockups/login-page.png)
-
-2. Dashboard (Admin)
-   ![Admin Dashboard](mockups/admin-dashboard.png)
-
-3. Premises Management
-   ![Premises Management](mockups/premises-management.png)
-
-4. Booking System
-   ![Booking System](mockups/booking-system.png)
-
-5. Reports
-   ![Reports](mockups/reports.png)
-
-6. Notifications
-   ![Notifications](mockups/notifications.png)
-
-7. Maintenance Tracking
-   ![Maintenance Tracking](mockups/maintenance-tracking.png)
-
-8. Search and Filter
-   ![Search and Filter](mockups/search-filter.png)
-
-9. Access Control
-   ![Access Control](mockups/access-control.png)
-
-10. Calendar Integration
-    ![Calendar Integration](mockups/calendar-integration.png)
+ER-diagram
 
 ## System Behavior and REST API Endpoints
 
@@ -130,7 +101,5 @@ This project is a Java Spring application for managing university premises, incl
 
 ## Installation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/university-premises-accounting.git
+
 
