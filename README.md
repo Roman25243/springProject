@@ -48,6 +48,7 @@ This project is a Java Spring application for managing university premises, incl
 
 ## Mockups
 ER-diagram
+![ER-diagram](https://github.com/Roman25243/springProject/blob/main/image.png)
 
 ## System Behavior and REST API Endpoints
 
@@ -99,7 +100,7 @@ ER-diagram
 - **Calendar Integration**
   - `POST /api/calendar`: Sync booking schedules with external calendars.
 
-## Installation
+
 
 
 
