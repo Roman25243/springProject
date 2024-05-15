@@ -46,7 +46,7 @@ This project is a Java Spring application for managing university premises, incl
     - Sync booking schedules with users' calendars (e.g., Google Calendar, Outlook).
     - Automatic updates and reminders for booked events.
 
-## Mockups
+
 ER-diagram
 ![ER-diagram](https://github.com/Roman25243/springProject/blob/main/image.png)
 
